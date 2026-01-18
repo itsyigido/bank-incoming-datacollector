@@ -1,4 +1,4 @@
-# EN
+# EN | ⚠️ THIS PROJECT IS OUTDATED IT MAY NOT WORK
 
 🏦 bank-incoming-datacollector
 
@@ -57,7 +57,8 @@ Transaction status
 
 Record creation time
 
-# TR
+
+# TR | ⚠️ BU PROJE GÜNCEL DEĞİLDİR VE ÇALIŞMAYABİLİR
 
 🏦 bank-incoming-datacollector
 

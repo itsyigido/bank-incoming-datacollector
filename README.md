@@ -1,3 +1,62 @@
+# EN
+
+🏦 bank-incoming-datacollector
+
+bank-incoming-datacollector is a backend service that receives, validates, normalizes, and securely stores incoming bank transfer notifications via bank APIs (webhook or polling).
+The collected data is kept ready for use by other applications and web interfaces.
+
+🚀 Project Purpose
+
+This project aims to build a centralized data collection and management service that:
+
+Collects incoming bank transfer transactions
+
+Deduplicates transactions to prevent duplicate records
+
+Converts data into a standardized format
+
+Persists transfer data into a database
+
+Exposes the data for access by other systems
+
+🧩 Core Features
+
+✅ Receive data from bank APIs (Webhook / Polling)
+
+✅ Prevent duplicate records using unique transaction IDs
+
+✅ Normalize incoming transfer data
+
+✅ Secure and scalable data storage
+
+✅ Share data through an internal REST API
+
+✅ Filterable data infrastructure for web interfaces
+
+✅ Logging and error handling
+
+📥 Collected Data Fields
+
+For each bank transfer, the following information is stored:
+
+Unique ID (UUID)
+
+Bank transaction ID
+
+Sender full name
+
+Transfer amount
+
+Currency
+
+Transaction date
+
+Transaction time
+
+Transaction status
+
+Record creation time
+
 # TR
 
 🏦 bank-incoming-datacollector

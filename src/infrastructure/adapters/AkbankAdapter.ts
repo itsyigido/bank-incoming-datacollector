@@ -8,9 +8,9 @@ export class AkbankAdapter implements BankAdapter {
     }
 
     /**
-     * Normalizes Akbank webhook payload.
+     * Normalizes Akbank webhook payload. -- Akbank webhook yükünü normalize eder.
      * 
-     * Expected Payload Structure (Example based on common formats):
+     * Expected Payload Structure (Example based on common formats): -- Beklenen Yük Yapısı (Yaygın formatlara dayalı örnek):
      * {
      *   "TransferId": "TRX-123456",
      *   "Sender": "Ahmet Yilmaz",
@@ -21,7 +21,7 @@ export class AkbankAdapter implements BankAdapter {
      */
     normalize(rawPayload: any): Transaction | null {
         try {
-            // Basic validation/presence check
+            // Basic validation/presence check -- Basit doğrulama/varlık kontrolü
             if (!rawPayload.TransferId || !rawPayload.Amount) {
                 return null;
             }

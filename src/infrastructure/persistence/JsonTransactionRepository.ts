@@ -40,7 +40,7 @@ export class JsonTransactionRepository implements TransactionRepository {
     async findAll(filter?: TransactionFilterOptions, sort?: TransactionSortOptions): Promise<Transaction[]> {
         let transactions = await this.readData();
 
-        // 1. Filter
+        // 1. Filter -- Filtrele
         if (filter) {
             if (filter.search) {
                 const searchLower = filter.search.toLowerCase();
@@ -64,7 +64,7 @@ export class JsonTransactionRepository implements TransactionRepository {
             }
         }
 
-        // 2. Sort
+        // 2. Sort -- Sırala
         if (sort) {
             transactions.sort((a, b) => {
                 const fieldA = a[sort.field];
@@ -75,7 +75,7 @@ export class JsonTransactionRepository implements TransactionRepository {
                 return 0;
             });
         } else {
-            // Default sort: Newest first
+            // Default sort: Newest first -- Varsayılan sıralama: En yeni ilk
             transactions.sort((a, b) => b.transactionDate.getTime() - a.transactionDate.getTime());
         }
 

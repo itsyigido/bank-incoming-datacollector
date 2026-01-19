@@ -49,7 +49,7 @@ router.get('/api/transactions', async (req: Request, res: Response) => {
     }
 });
 
-// New Simulation Endpoint
+// New Simulation Endpoint -- Yeni Simülasyon Uç Noktası
 router.post('/api/simulate', async (req: Request, res: Response) => {
     try {
         const { senderName, amount, date } = req.body;
@@ -62,24 +62,14 @@ router.post('/api/simulate', async (req: Request, res: Response) => {
             "Date": date ? new Date(date).toISOString() : new Date().toISOString()
         };
 
-        // Internal loopback to trigger our own webhook logic, 
-        // effectively simulating an external call.
         // const payload = {
         //     "TransferId": "TRX-" + Math.floor(Math.random() * 10000000),
         //     "Sender": "Digital User " + Math.floor(Math.random() * 100),
         //     "Amount": (Math.random() * 10000).toFixed(2),
         //     "Currency": "TRY",
         //     "Date": new Date().toISOString()
-        // };
 
-        // We can call the service directly or trigger the webhook route. 
-        // Triggering the webhook route tests the parsing logic too.
-        // But for simplicity/speed here, we can just call the method:
-        // await transactionService.processWebhook(akbankAdapter, payload);
-        // OR better, we use axios to call our own webhook endpoint to ensure full flow 
-        // (but need to know port).
-
-        // Simplest valid "Unit" simulation:
+        // Simplest valid "Unit" simulation: -- En basit geçerli "Birim" simülasyonu:
         const result = await transactionService.processWebhook(akbankAdapter, payload);
         res.json({ message: "Simulation triggered", result });
 

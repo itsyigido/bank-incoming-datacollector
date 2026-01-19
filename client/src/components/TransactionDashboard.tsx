@@ -14,12 +14,12 @@ const TransactionDashboard: React.FC = () => {
     });
     const [sort, setSort] = useState({ field: 'transactionDate', order: 'desc' });
 
-    // Modal State
+    // Modal State --  Modal Durumu
     const [showModal, setShowModal] = useState(false);
     const [simData, setSimData] = useState({
         senderName: '',
         amount: '',
-        date: new Date().toISOString().slice(0, 16) // Default to current datetime-local format
+        date: new Date().toISOString().slice(0, 16) // Default to current local datetime  format -- Varsayılan olarak geçerli yerel tarihzaman formatı
     });
 
     const loadData = async () => {
@@ -47,7 +47,7 @@ const TransactionDashboard: React.FC = () => {
         try {
             await simulateBankTransaction(simData);
             setShowModal(false);
-            // Reset form
+            // Reset form -- Formu sıfırla
             setSimData({ senderName: '', amount: '', date: new Date().toISOString().slice(0, 16) });
             await loadData();
         } catch (err) {
@@ -68,7 +68,7 @@ const TransactionDashboard: React.FC = () => {
                 </button>
             </header>
 
-            {/* Modal Overlay */}
+            {/* Modal Overlay -- Modal Arayüzü */}
             {showModal && (
                 <div className="modal-overlay">
                     <div className="modal">

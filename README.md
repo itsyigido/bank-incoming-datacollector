@@ -1,4 +1,5 @@
 # EN | ⚠️ THIS PROJECT IS OUTDATED IT MAY NOT WORK
+Also, do not forget to write code that adapts your own bank’s API in order to use this code. This code is currently designed to run on a sandbox API by mimicking a bank API from Turkey and collecting data accordingly.
 
 🏦 bank-incoming-datacollector
 
@@ -59,6 +60,7 @@ Record creation time
 
 
 # TR | ⚠️ BU PROJE GÜNCEL DEĞİLDİR VE ÇALIŞMAYABİLİR
+Ayrıca bu kodu kullanmak için kendi bankanızın apisini uyarladığınız bir kod yazmayı unutmayınız. Bu kod şuanda sadece türkiyedeki bir bankanın apisini taklit ederek veri toplayarak çalışmak üzere kısaca sandbox api üstünde tasarlanmıştır.
 
 🏦 bank-incoming-datacollector
 
